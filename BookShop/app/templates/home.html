@@ -13,12 +13,16 @@ Book Shop
 {% block main %}
 <div class="books">
     {% for book in books %}
-    <a href="/book/{{ book.slug }}" class="book">
-        <div class="book-img" style="background-image: url({% static 'images/'|add:book.img %}"></div>
-        <h2>{{ book.title }}</h2>
+    <div>
+        <a href="/book/{{ book.slug }}" class="book">
+            <div class="book-img" style="background-image: url({% static 'images/'|add:book.img %}"></div>
+            <h2>{{ book.title }}</h2>
+        </a>
         <p>Автор: {{ book.author }}</p>
         <p>Жанр: {{ book.genre }}</p>
-    </a>
+        <br>
+        <button>Buy {{ book.price }} ₴</button>
+    </div>
     {% endfor %}
 </div>
 {% endblock %}
