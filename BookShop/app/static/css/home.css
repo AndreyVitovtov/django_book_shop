@@ -3,14 +3,12 @@ a {
 }
 
 .books {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(calc(20% - 10px), 1fr));
+    gap: 5px;
 }
 
 .book-img {
-    width: 500px;
-    height: 650px;
-    background-size: cover;
-    background-position: center;
+    width: auto;
+    max-height: 350px;
 }

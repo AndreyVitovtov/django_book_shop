@@ -15,7 +15,7 @@ Book Shop
     {% for book in books %}
     <div>
         <a href="/book/{{ book.slug }}" class="book">
-            <div class="book-img" style="background-image: url({% static 'images/'|add:book.img %}"></div>
+            <img src="{% static 'images/'|add:book.img %}" class="book-img">
             <h2>{{ book.title }}</h2>
         </a>
         <p>Автор: {{ book.author }}</p>
