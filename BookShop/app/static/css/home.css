@@ -1,0 +1,16 @@
+a {
+    color: #363636;
+}
+
+.books {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.book-img {
+    width: 500px;
+    height: 650px;
+    background-size: cover;
+    background-position: center;
+}

@@ -1,0 +1,21 @@
+<!--{% load static %}-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Book Shop{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+    {% block css_file %}{% load static %}{% endblock %}
+</head>
+<body>
+    <header>
+        <a href="/">
+            <h1>BOOKS</h1>
+        </a>
+    </header>
+    <main>
+        {% block main %} {% endblock %}
+    </main>
+</body>
+</html>

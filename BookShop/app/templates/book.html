@@ -1,0 +1,20 @@
+{% extends 'main.html' %}
+
+{% block title %}
+  Book Shop
+{% endblock %}
+
+{% block css_file %}
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/book.css' %}">
+{% endblock %}
+
+{% block main %}
+    <div class="book">
+        <div class="book-img" style="background-image: url({% static 'images/'|add:book.img %}"></div>
+        <h2>{{ book.title }}</h2>
+        <p>Автор: {{ book.author }}</p>
+        <p>Жанр: {{ book.genre }}</p>
+        <p>{{ book.description }}</p>
+    </div>
+{% endblock %}
