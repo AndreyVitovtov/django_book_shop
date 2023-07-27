@@ -6,7 +6,7 @@
 
 {% block css_file %}
     {% load static %}
-    <link rel="stylesheet" href="{% static 'css/book.css' %}">
+    <link rel="stylesheet" href="{% static 'app/css/book.css' %}">
 {% endblock %}
 
 {% block main %}
@@ -18,5 +18,18 @@
         <p>{{ book.description }}</p>
         <br>
         <button>Buy {{ book.price }} ₴</button>
+        <br>
+        <br>
+        <div class="form-add-comment">
+            <h4>Add comment:</h4>
+            <br>
+            {% include 'comments/form-comment.html' %}
+        </div>
+        <br>
+        <h4>Comments: {{ comments_count }}</h4>
+        <br>
+        {% for comment in comments %}
+            {% include 'comments/comment.html' %}
+        {% endfor %}
     </div>
 {% endblock %}

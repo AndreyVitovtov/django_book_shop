@@ -1,0 +1,28 @@
+.book-img {
+    width: 500px;
+    height: 650px;
+    background-size: cover;
+    background-position: center;
+}
+
+.comment {
+    margin: 10px 0
+}
+
+.form-add-comment {
+    border: solid 1px #d1d1d1;
+    padding: 5px;
+}
+
+.form-add-comment label {
+    display: block;
+}
+
+.form-add-comment input, .form-add-comment  textarea {
+    margin-bottom: 10px;
+}
+
+.comment {
+    border: solid 1px #d1d1d1;
+    padding: 5px;
+}
